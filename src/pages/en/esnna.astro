@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import FadeIn from '../../components/FadeIn';
+---
+
+<Layout title="ESNNA Policy | Vibal Tours">
+	<Navbar lang="en" client:load />
+	<main class="pt-32 pb-24 min-h-[70vh] bg-slate-50">
+		<FadeIn client:load className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white p-10 md:p-14 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+				<div class="flex items-center gap-4 mb-8">
+                    <svg class="w-12 h-12 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+					<h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900">ESNNA Prevention</h1>
+				</div>
+
+                <div class="prose prose-slate max-w-none text-slate-600 space-y-6 text-lg">
+                    <p>
+                        At <strong>VibalTours</strong> we are firmly committed to protecting the rights of children and adolescents. We categorically reject any form of exploitation, pornography, and child sex tourism.
+                    </p>
+                    <p>
+                        In strict compliance with <strong>Law N° 29408 (General Tourism Law of Peru)</strong> and current legislation, our agency adopts a zero-tolerance policy against the Sexual Exploitation of Children and Adolescents (ESNNA) within the tourism industry.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Our Commitment:</h3>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li>To immediately report any act, conduct, or suspicion of sexual exploitation of minors to the corresponding authorities.</li>
+                        <li>To raise awareness among our work team, collaborators, suppliers, and tourists about the importance of preventing this serious crime.</li>
+                        <li>To guarantee that all the tourism services we offer are developed within a framework of responsible, ethical, and safe tourism.</li>
+                    </ul>
+                    <p class="mt-8 font-medium">
+                        Tourism must be a tool for social development and well-being, protecting the most vulnerable. Let's take care of our childhood together.
+                    </p>
+                </div>
+			</div>
+		</FadeIn>
+	</main>
+	<Footer lang="en" />
+</Layout>

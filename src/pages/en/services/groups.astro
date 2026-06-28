@@ -1,0 +1,41 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer';
+---
+
+<Layout title="Organized Group Trips | Vibal Tours">
+	<Navbar lang="en" isTransparent={true} client:load />
+	
+	<!-- Hero Section -->
+	<div class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/80 z-10"></div>
+		<img 
+			src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=2000&auto=format&fit=crop" 
+			alt="Organized Group Trips" 
+			class="absolute inset-0 w-full h-full object-cover object-center z-0"
+		/>
+		
+		<div class="relative z-20 text-center px-4 max-w-5xl mx-auto pt-20">
+			<span class="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
+				🌿 Vibal Tours
+			</span>
+			<h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+				ORGANIZED <br/><span class="text-3xl md:text-5xl font-light text-slate-200">GROUP TRIPS</span>
+			</h1>
+		</div>
+	</div>
+
+	<main class="py-24 bg-slate-50 text-center">
+		<div class="max-w-3xl mx-auto px-4">
+			<h2 class="text-3xl font-display font-bold text-slate-900 mb-6">Unforgettable group experiences</h2>
+			<p class="text-lg text-slate-600 mb-8">
+				We will soon have more information about our group trips. For now, feel free to contact us to coordinate your trip.
+			</p>
+			<a href="/en/contact" class="inline-block bg-brand-600 text-white font-bold py-3 px-8 rounded-xl hover:bg-brand-700 transition-colors">
+				Contact Us
+			</a>
+		</div>
+	</main>
+	<Footer lang="en" />
+</Layout>

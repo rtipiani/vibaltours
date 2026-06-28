@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import FadeIn from '../components/FadeIn';
+---
+
+<Layout title="404: Página no encontrada | Vibal Tours">
+	<Navbar lang="es" client:load />
+	<main class="pt-32 pb-24 min-h-[75vh] flex items-center justify-center relative overflow-hidden">
+		<!-- Decorative blobs -->
+		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-3xl -z-10"></div>
+		
+		<FadeIn client:load className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<span class="text-brand-600 font-bold text-xl tracking-wider uppercase mb-4 block">Error 404</span>
+			<h1 class="text-6xl md:text-8xl font-display font-bold text-slate-900 mb-6">¡Oops!</h1>
+			<p class="text-xl md:text-2xl text-slate-600 mb-10 max-w-xl mx-auto leading-relaxed">
+				Parece que te has perdido. La página que estás buscando no existe o ha sido movida a otro lugar.
+			</p>
+			
+			<a href="/" class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-500/30">
+				<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+				Volver al Inicio
+			</a>
+		</FadeIn>
+	</main>
+	<Footer lang="es" />
+</Layout>

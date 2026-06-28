@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import FadeIn from '../components/FadeIn';
+---
+
+<Layout title="Políticas de Privacidad | Vibal Tours">
+	<Navbar lang="es" client:load />
+	
+	<main class="pt-32 pb-24 bg-slate-50 min-h-screen">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<FadeIn client:load>
+				<div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/40 border border-slate-100">
+					<h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-8">Políticas de Privacidad</h1>
+					
+					<div class="prose prose-slate prose-lg max-w-none">
+						<p>En VibalTours, valoramos profundamente la confianza que depositas en nosotros. Esta Política de Privacidad describe cómo recopilamos, usamos, protegemos y compartimos tu información personal cuando visitas nuestro sitio web o utilizas nuestros servicios.</p>
+						
+						<h3>1. Información que recopilamos</h3>
+						<p>Podemos recopilar información personal como tu nombre, dirección de correo electrónico, número de teléfono y detalles de pago cuando realizas una reserva, te suscribes a nuestro boletín o nos contactas para consultas.</p>
+						
+						<h3>2. Uso de la información</h3>
+						<p>Utilizamos tu información para:</p>
+						<ul>
+							<li>Procesar y gestionar tus reservas y pagos.</li>
+							<li>Comunicarnos contigo respecto a tus viajes y enviar actualizaciones.</li>
+							<li>Mejorar nuestros servicios y personalizar tu experiencia de usuario.</li>
+							<li>Cumplir con obligaciones legales y regulatorias.</li>
+						</ul>
+						
+						<h3>3. Protección de datos</h3>
+						<p>Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger tu información personal contra acceso no autorizado, pérdida o alteración. Solo el personal autorizado de VibalTours tiene acceso a tus datos.</p>
+
+						<h3>4. Compartir información</h3>
+						<p>No vendemos, alquilamos ni comercializamos tu información personal con terceros. Solo podemos compartir tu información con proveedores de servicios necesarios para cumplir con tu reserva (como aerolíneas u hoteles) o cuando la ley lo exija.</p>
+						
+						<h3>5. Tus derechos</h3>
+						<p>Tienes derecho a acceder, corregir, actualizar o solicitar la eliminación de tu información personal en cualquier momento. Para ejercer estos derechos, por favor contáctanos a <a href="mailto:reservas@vibaltours.com">reservas@vibaltours.com</a>.</p>
+					</div>
+				</div>
+			</FadeIn>
+		</div>
+	</main>
+	<Footer lang="es" />
+</Layout>

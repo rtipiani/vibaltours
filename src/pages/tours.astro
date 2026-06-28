@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import ToursGrid from '../components/ToursGrid';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Tours | Vibal Tours">
+	<Navbar lang="es" client:load />
+	<main class="pt-20">
+		<ToursGrid lang="es" client:load />
+	</main>
+	<Footer lang="es" />
+</Layout>

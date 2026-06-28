@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import FadeIn from '../components/FadeIn';
+---
+
+<Layout title="Términos y Condiciones | Vibal Tours">
+	<Navbar lang="es" client:load />
+	
+	<main class="pt-32 pb-24 bg-slate-50 min-h-screen">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<FadeIn client:load>
+				<div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/40 border border-slate-100">
+					<h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-8">Términos y Condiciones</h1>
+					
+					<div class="prose prose-slate prose-lg max-w-none">
+						<p>Bienvenido a VibalTours. Estos Términos y Condiciones regulan el uso de nuestros servicios y la adquisición de nuestros paquetes turísticos. Al reservar con nosotros, aceptas estos términos en su totalidad.</p>
+						
+						<h3>1. Reservas y Pagos</h3>
+						<p>Todas las reservas están sujetas a disponibilidad. Para confirmar una reserva, se requerirá un depósito inicial o el pago total según las especificaciones del paquete seleccionado. Los pagos pueden realizarse a través de los medios autorizados por la agencia.</p>
+						
+						<h3>2. Cancelaciones y Reembolsos</h3>
+						<p>Las políticas de cancelación varían según el paquete y los proveedores de servicios (aerolíneas, hoteles, etc.). Por regla general:</p>
+						<ul>
+							<li>Las cancelaciones hechas con anticipación pueden estar sujetas a cargos administrativos.</li>
+							<li>Las cancelaciones de último minuto o la no presentación (no-show) no son reembolsables.</li>
+							<li>Recomendamos encarecidamente adquirir un seguro de viaje para cubrir imprevistos.</li>
+						</ul>
+						
+						<h3>3. Responsabilidades</h3>
+						<p>VibalTours actúa como intermediario entre los pasajeros y los proveedores de servicios (transporte, alojamiento, operadores locales). No nos hacemos responsables por demoras, huelgas, condiciones climáticas u otros factores de fuerza mayor que alteren el itinerario.</p>
+
+						<h3>4. Documentación</h3>
+						<p>Es responsabilidad exclusiva del pasajero contar con la documentación requerida (DNI, pasaporte, visas, vacunas) en regla y vigente antes del inicio del viaje.</p>
+						
+						<h3>5. Modificaciones</h3>
+						<p>VibalTours se reserva el derecho de modificar itinerarios o sustituir servicios por otros de igual o mayor categoría en caso de ser necesario por motivos operativos o de fuerza mayor.</p>
+					</div>
+				</div>
+			</FadeIn>
+		</div>
+	</main>
+	<Footer lang="es" />
+</Layout>

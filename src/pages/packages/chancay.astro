@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import PackagesGrid from '../../components/PackagesGrid';
+import { MapPin } from 'lucide-react';
+---
+
+<Layout title="Chancay, Pisco e Ica | Vibal Tours">
+	<Navbar lang="es" isTransparent={true} client:load />
+	
+	<!-- Hero Section -->
+	<div class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/80 z-10"></div>
+		<img 
+			src="https://images.unsplash.com/photo-1549557676-47b2c0f20954?q=80&w=2000&auto=format&fit=crop" 
+			alt="Ica Huacachina" 
+			class="absolute inset-0 w-full h-full object-cover object-center z-0"
+		/>
+		
+		<div class="relative z-20 text-center px-4 max-w-5xl mx-auto pt-20">
+			<span class="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
+				🌿 Paquetes Terrestres
+			</span>
+			<h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+				CHANCAY, PISCO E ICA <br/><span class="text-3xl md:text-5xl font-light text-slate-200">RUTA COSTERA</span>
+			</h1>
+			<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white font-medium">
+				<div class="flex items-center gap-2">
+					<MapPin className="w-5 h-5 text-accent-400" />
+					<span>Chancay - Pisco - Ica</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main class="pt-24 pb-12 bg-slate-50">
+		<PackagesGrid lang="es" destination="chancay" client:load />
+	</main>
+	<Footer lang="es" />
+</Layout>

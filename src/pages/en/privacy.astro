@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import FadeIn from '../../components/FadeIn';
+---
+
+<Layout title="Privacy Policy | Vibal Tours">
+	<Navbar lang="en" client:load />
+	
+	<main class="pt-32 pb-24 bg-slate-50 min-h-screen">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<FadeIn client:load>
+				<div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/40 border border-slate-100">
+					<h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-8">Privacy Policy</h1>
+					
+					<div class="prose prose-slate prose-lg max-w-none">
+						<p>At VibalTours, we deeply value the trust you place in us. This Privacy Policy describes how we collect, use, protect, and share your personal information when you visit our website or use our services.</p>
+						
+						<h3>1. Information We Collect</h3>
+						<p>We may collect personal information such as your name, email address, phone number, and payment details when you make a reservation, subscribe to our newsletter, or contact us for inquiries.</p>
+						
+						<h3>2. Use of Information</h3>
+						<p>We use your information to:</p>
+						<ul>
+							<li>Process and manage your reservations and payments.</li>
+							<li>Communicate with you regarding your trips and send updates.</li>
+							<li>Improve our services and personalize your user experience.</li>
+							<li>Comply with legal and regulatory obligations.</li>
+						</ul>
+						
+						<h3>3. Data Protection</h3>
+						<p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, loss, or alteration. Only authorized VibalTours personnel have access to your data.</p>
+
+						<h3>4. Sharing Information</h3>
+						<p>We do not sell, rent, or trade your personal information with third parties. We may only share your information with service providers necessary to fulfill your reservation (such as airlines or hotels) or when required by law.</p>
+						
+						<h3>5. Your Rights</h3>
+						<p>You have the right to access, correct, update, or request the deletion of your personal information at any time. To exercise these rights, please contact us at <a href="mailto:reservas@vibaltours.com">reservas@vibaltours.com</a>.</p>
+					</div>
+				</div>
+			</FadeIn>
+		</div>
+	</main>
+	<Footer lang="en" />
+</Layout>

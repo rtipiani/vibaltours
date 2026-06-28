@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import FadeIn from '../components/FadeIn';
+---
+
+<Layout title="Nosotros | Vibal Tours">
+	<Navbar lang="es" client:load />
+	
+	<!-- Hero Section for About -->
+	<div class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-slate-900 overflow-hidden">
+		<div class="absolute inset-0">
+			<img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80" alt="Nosotros VibalTours" class="w-full h-full object-cover opacity-20" />
+			<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+		</div>
+		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<FadeIn client:load>
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">Nuestra Historia</h1>
+				<p class="text-xl text-slate-300 max-w-2xl mx-auto font-light">
+					Transformando viajes en experiencias de vida inolvidables.
+				</p>
+			</FadeIn>
+		</div>
+	</div>
+
+	<main class="py-24 bg-white relative">
+		<!-- Decorative Background -->
+		<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-50 rounded-full blur-3xl opacity-50 -z-10 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+				
+				<!-- Text Content -->
+				<FadeIn client:load>
+					<div class="prose prose-lg prose-slate max-w-none">
+						<span class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-600 text-sm font-bold tracking-wider uppercase mb-4">
+							Sobre Nosotros
+						</span>
+						<h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6 leading-tight">
+							Más de 15 años creando <span class="text-brand-500">recuerdos invaluables</span>
+						</h2>
+						<p class="text-slate-600 mb-6 leading-relaxed">
+							VibalTours es una agencia de viajes con sede en la ciudad de Cajamarca, especializada en la organización de viajes grupales a nivel nacional e internacional. A lo largo de nuestra trayectoria, nos hemos consolidado como una empresa confiable, comprometida con brindar experiencias únicas, seguras y memorables.
+						</p>
+						<p class="text-slate-600 mb-8 leading-relaxed">
+							Nos caracterizamos por ofrecer un servicio personalizado, cuidando cada detalle del viaje y adaptándonos a las necesidades de cada grupo o pasajero. Nuestro principal objetivo es garantizar calidad, confianza y satisfacción.
+						</p>
+						
+						<div class="bg-slate-900 rounded-2xl p-6 md:p-8 flex items-start gap-5 shadow-xl shadow-slate-900/10">
+							<svg class="w-10 h-10 text-brand-400 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+							</svg>
+							<div>
+								<h4 class="text-white font-bold text-lg mb-2">Agencia Formal y Segura</h4>
+								<p class="text-slate-400 text-sm leading-relaxed m-0">
+									VibalTours es una empresa formalmente constituida, inscrita en DIRCETUR, y cuenta con todos los permisos necesarios para operar dentro del sector turismo, brindando así respaldo total a nuestros clientes.
+								</p>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+
+				<!-- Image Grid (Bento Style) -->
+				<FadeIn client:load>
+					<div class="grid grid-cols-2 gap-4 h-[600px]">
+						<div class="col-span-1 row-span-2 rounded-3xl overflow-hidden shadow-lg">
+							<img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80" alt="Plaza Cajamarca" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+						</div>
+						<div class="col-span-1 rounded-3xl overflow-hidden shadow-lg relative group">
+							<img src="https://images.unsplash.com/photo-1547481183-7c30f46d9d06?auto=format&fit=crop&q=80" alt="Selva" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+						</div>
+						<div class="col-span-1 rounded-3xl overflow-hidden shadow-lg bg-brand-500 p-8 flex flex-col justify-center text-white relative">
+							<div class="absolute inset-0 bg-white/10 opacity-30"></div>
+							<span class="text-5xl md:text-6xl font-display font-bold mb-2 relative z-10">15+</span>
+							<span class="text-brand-100 font-medium text-lg relative z-10">Años de<br/>Experiencia</span>
+						</div>
+					</div>
+				</FadeIn>
+
+			</div>
+		</div>
+	</main>
+	<Footer lang="es" />
+</Layout>

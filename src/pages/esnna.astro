@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import FadeIn from '../components/FadeIn';
+---
+
+<Layout title="Política ESNNA | Vibal Tours">
+	<Navbar lang="es" client:load />
+	<main class="pt-32 pb-24 min-h-[70vh] bg-slate-50">
+		<FadeIn client:load className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white p-10 md:p-14 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+				<div class="flex items-center gap-4 mb-8">
+                    <svg class="w-12 h-12 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+					<h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900">Prevención ESNNA</h1>
+				</div>
+
+                <div class="prose prose-slate max-w-none text-slate-600 space-y-6 text-lg">
+                    <p>
+                        En <strong>VibalTours</strong> estamos firmemente comprometidos con la protección de los derechos de la infancia y la adolescencia. Rechazamos categóricamente cualquier forma de explotación, pornografía y turismo sexual infantil.
+                    </p>
+                    <p>
+                        En estricto cumplimiento de la <strong>Ley N° 29408 (Ley General de Turismo del Perú)</strong> y la legislación vigente, nuestra agencia adopta medidas de tolerancia cero frente a la Explotación Sexual de Niñas, Niños y Adolescentes (ESNNA) en el ámbito del turismo.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Nuestro Compromiso:</h3>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li>Denunciar de manera inmediata a las autoridades correspondientes cualquier acto, conducta o sospecha de explotación sexual de menores de edad.</li>
+                        <li>Sensibilizar a nuestro equipo de trabajo, colaboradores, proveedores y turistas sobre la importancia de prevenir este grave delito.</li>
+                        <li>Garantizar que todos los servicios turísticos que ofrecemos se desarrollan en un marco de turismo responsable, ético y seguro.</li>
+                    </ul>
+                    <p class="mt-8 font-medium">
+                        El turismo debe ser una herramienta para el desarrollo y bienestar social, protegiendo a los más vulnerables. Cuidemos juntos de nuestra infancia.
+                    </p>
+                </div>
+			</div>
+		</FadeIn>
+	</main>
+	<Footer lang="es" />
+</Layout>

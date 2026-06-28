@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import HeroSlider from '../../components/HeroSlider';
+import Features from '../../components/Features';
+import ToursGrid from '../../components/ToursGrid';
+import Footer from '../../components/Footer';
+---
+
+<Layout title="Vibal Tours | Your adventure in the central jungle" description="Explore the true magic of the central jungle of Peru with local experts.">
+	<Navbar lang="en" isTransparent={true} client:load />
+	<main class="relative overflow-hidden">
+		<HeroSlider lang="en" client:load />
+		<div class="relative">
+			<!-- Decorative Background Blobs -->
+			<div class="absolute top-40 left-0 w-96 h-96 bg-brand-50 rounded-full blur-3xl opacity-60 -z-10 pointer-events-none"></div>
+			<div class="absolute bottom-40 right-0 w-[500px] h-[500px] bg-brand-100/40 rounded-full blur-3xl opacity-50 -z-10 pointer-events-none"></div>
+			
+			<Features lang="en" client:load />
+			<ToursGrid lang="en" client:load />
+		</div>
+	</main>
+	<Footer lang="en" />
+</Layout>
