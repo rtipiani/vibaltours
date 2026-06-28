@@ -8,50 +8,45 @@ import { MapPin } from 'lucide-react';
 const itinerary = [
   {
     day: 1,
-    title: "Castillo de Chancay",
-    description: "Recorrido por la arquitectura medieval del Castillo de Chancay y sus museos al norte de Lima. Por la tarde, traslado hacia el sur con destino a Paracas."
+    title: "Llegada a la Selva Central",
+    description: "Recepción y traslado. Inicio de nuestra aventura recorriendo los paisajes de la selva central, con paradas en miradores naturales para apreciar la biodiversidad."
   },
   {
     day: 2,
-    title: "Islas Ballestas (Paracas)",
-    description: "Paseo en deslizador para observar la gran diversidad de fauna marina, como lobos marinos y pingüinos de Humboldt, además del enigmático Candelabro."
+    title: "Expedición Pozuzo y Contacto Cultural",
+    description: "Viaje a la única colonia austro-alemana del mundo. Caminata por la Plaza Principal, visita a la Iglesia San José, el puente colgante Emperador Guillermo I, y degustación de su gastronomía europea-amazónica."
   },
   {
     day: 3,
-    title: "Oasis de la Huacachina (Ica)",
-    description: "Visita a una vitivinícola tradicional para cata de piscos y vinos. Tarde de aventura extrema con tubulares (buggies) y sandboard en las dunas de Ica."
-  },
-  {
-    day: 4,
-    title: "Retorno a Lima",
-    description: "Mañana libre para disfrutar del sol y la exquisita gastronomía local. Por la tarde, viaje de retorno a la ciudad de Lima."
+    title: "Naturaleza y Despedida",
+    description: "Mañana libre para explorar los alrededores, realizar compras de artesanías locales o visitar cascadas cercanas. Por la tarde, traslado para el viaje de retorno."
   }
 ];
 ---
 
-<Layout title="Chancay, Pisco e Ica | Vibal Tours">
+<Layout title="Expedición Pozuzo | Vibal Tours">
 	<Navbar lang="es" isTransparent={true} client:load />
 	
 	<!-- Hero Section -->
 	<div class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
 		<div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/80 z-10"></div>
 		<img 
-			src="https://images.unsplash.com/photo-1549557676-47b2c0f20954?q=80&w=2000&auto=format&fit=crop" 
-			alt="Ica Huacachina" 
+			src="https://images.unsplash.com/photo-1533088231264-98425ee190a6?auto=format&fit=crop&w=2000&q=80" 
+			alt="Pozuzo" 
 			class="absolute inset-0 w-full h-full object-cover object-center z-0"
 		/>
 		
 		<div class="relative z-20 text-center px-4 max-w-5xl mx-auto pt-20">
 			<span class="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
-				🌿 Paquetes Terrestres
+				🌿 Tour Cultural y de Naturaleza
 			</span>
 			<h1 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
-				CHANCAY, PISCO E ICA <br/><span class="text-2xl md:text-4xl font-light text-slate-200">RUTA COSTERA</span>
+				EXPEDICIÓN <br/><span class="text-2xl md:text-4xl font-light text-slate-200">POZUZO</span>
 			</h1>
 			<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white font-medium">
 				<div class="flex items-center gap-2">
 					<MapPin className="w-5 h-5 text-accent-400" />
-					<span>Chancay - Pisco - Ica</span>
+					<span>Pozuzo, Perú</span>
 				</div>
 			</div>
 		</div>

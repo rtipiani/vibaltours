@@ -37,24 +37,22 @@ export default function Navbar({ lang, isTransparent = false }: NavbarProps) {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || !isTransparent ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm py-3"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <a href={translatePath('/')} className="flex items-center">
-          <img src="/logo.webp" alt="VibalTours" className="h-20 w-auto object-contain" />
+          <img src="/logo.webp" alt="VibalTours" className="h-12 w-auto object-contain" />
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-8">
           <a href={translatePath('/')} className={
-            isActive('/') ? 'font-bold text-brand-500 transition-colors' : `font-medium transition-colors hover:text-brand-500 ${isScrolled || !isTransparent ? 'text-slate-600' : 'text-slate-100'}`
+            isActive('/') ? 'font-bold text-brand-500 transition-colors' : 'font-medium transition-colors hover:text-brand-500 text-slate-600'
           }>
             {t('nav.home')}
           </a>
           <a href={translatePath('/tours')} className={
-            isActive('/tours') ? 'font-bold text-brand-500 transition-colors' : `font-medium transition-colors hover:text-brand-500 ${isScrolled || !isTransparent ? 'text-slate-600' : 'text-slate-100'}`
+            isActive('/tours') ? 'font-bold text-brand-500 transition-colors' : 'font-medium transition-colors hover:text-brand-500 text-slate-600'
           }>
             {t('nav.tours')}
           </a>
@@ -62,7 +60,7 @@ export default function Navbar({ lang, isTransparent = false }: NavbarProps) {
           {/* Packages Dropdown */}
           <div className="relative group">
             <button className={`flex items-center gap-1 transition-colors hover:text-brand-500 ${
-              isActive('/packages') ? 'font-bold text-brand-500' : `font-medium ${isScrolled || !isTransparent ? 'text-slate-600' : 'text-slate-100'}`
+              isActive('/packages') ? 'font-bold text-brand-500' : 'font-medium text-slate-600'
             }`}>
               {t('nav.packages')}
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -85,7 +83,7 @@ export default function Navbar({ lang, isTransparent = false }: NavbarProps) {
           {/* Services Dropdown */}
           <div className="relative group">
             <button className={`flex items-center gap-1 transition-colors hover:text-brand-500 ${
-              isActive('/services') ? 'font-bold text-brand-500' : `font-medium ${isScrolled || !isTransparent ? 'text-slate-600' : 'text-slate-100'}`
+              isActive('/services') ? 'font-bold text-brand-500' : 'font-medium text-slate-600'
             }`}>
               {t('nav.services')}
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -103,30 +101,47 @@ export default function Navbar({ lang, isTransparent = false }: NavbarProps) {
           </div>
 
           <a href={translatePath('/about')} className={
-            isActive('/about') ? 'font-bold text-brand-500 transition-colors' : `font-medium transition-colors hover:text-brand-500 ${isScrolled || !isTransparent ? 'text-slate-600' : 'text-slate-100'}`
+            isActive('/about') ? 'font-bold text-brand-500 transition-colors' : 'font-medium transition-colors hover:text-brand-500 text-slate-600'
           }>
             {t('nav.about')}
           </a>
           <a href={translatePath('/contact')} className={
-            isActive('/contact') ? 'font-bold text-brand-500 transition-colors' : `font-medium transition-colors hover:text-brand-500 ${isScrolled || !isTransparent ? 'text-slate-600' : 'text-slate-100'}`
+            isActive('/contact') ? 'font-bold text-brand-500 transition-colors' : 'font-medium transition-colors hover:text-brand-500 text-slate-600'
           }>
             {t('nav.contact')}
           </a>
         </nav>
 
         {/* Language Switcher */}
-        <div className="hidden md:flex items-center gap-4">
-          <a href="/" className={`text-sm font-medium hover:text-brand-500 ${lang === 'es' ? 'text-brand-500 underline' : (isScrolled || !isTransparent ? 'text-slate-500' : 'text-slate-200')}`}>ES</a>
-          <span className={isScrolled || !isTransparent ? 'text-slate-300' : 'text-slate-400'}>|</span>
-          <a href="/en" className={`text-sm font-medium hover:text-brand-500 ${lang === 'en' ? 'text-brand-500 underline' : (isScrolled || !isTransparent ? 'text-slate-500' : 'text-slate-200')}`}>EN</a>
+        <div className="hidden xl:flex items-center bg-slate-100/80 backdrop-blur-sm p-1 rounded-full border border-slate-200/50">
+          <a 
+            href="/" 
+            className={`text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200 ${
+              lang === 'es' 
+                ? 'bg-white text-brand-600 shadow-sm' 
+                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
+            }`}
+          >
+            ES
+          </a>
+          <a 
+            href="/en" 
+            className={`text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200 ${
+              lang === 'en' 
+                ? 'bg-white text-brand-600 shadow-sm' 
+                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
+            }`}
+          >
+            EN
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden"
+          className="xl:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          <svg className={`w-6 h-6 ${isScrolled || !isTransparent ? 'text-slate-900' : 'text-brand-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-6 h-6 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {mobileMenuOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -138,7 +153,7 @@ export default function Navbar({ lang, isTransparent = false }: NavbarProps) {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-lg px-4 py-4 flex flex-col gap-4">
+        <div className="xl:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-lg px-4 py-4 flex flex-col gap-4">
           <a href={translatePath('/')} className="text-slate-700 font-medium">{t('nav.home')}</a>
           <a href={translatePath('/tours')} className="text-slate-700 font-medium">{t('nav.tours')}</a>
           
@@ -171,9 +186,29 @@ export default function Navbar({ lang, isTransparent = false }: NavbarProps) {
 
           <a href={translatePath('/about')} className="text-slate-700 font-medium">{t('nav.about')}</a>
           <a href={translatePath('/contact')} className="text-slate-700 font-medium">{t('nav.contact')}</a>
-          <div className="flex gap-4 pt-4 border-t border-slate-100">
-            <a href="/" className={`text-sm font-medium ${lang === 'es' ? 'text-brand-600 font-bold' : 'text-slate-500'}`}>ES</a>
-            <a href="/en" className={`text-sm font-medium ${lang === 'en' ? 'text-brand-600 font-bold' : 'text-slate-500'}`}>EN</a>
+          <div className="flex justify-center pt-6 border-t border-slate-100">
+            <div className="flex items-center bg-slate-100 p-1 rounded-full border border-slate-200 w-full max-w-[200px]">
+              <a 
+                href="/" 
+                className={`flex-1 text-center text-sm font-bold py-2 rounded-full transition-all duration-200 ${
+                  lang === 'es' 
+                    ? 'bg-white text-brand-600 shadow-sm' 
+                    : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
+                }`}
+              >
+                ES
+              </a>
+              <a 
+                href="/en" 
+                className={`flex-1 text-center text-sm font-bold py-2 rounded-full transition-all duration-200 ${
+                  lang === 'en' 
+                    ? 'bg-white text-brand-600 shadow-sm' 
+                    : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
+                }`}
+              >
+                EN
+              </a>
+            </div>
           </div>
         </div>
       )}

@@ -2,8 +2,26 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import PackagesGrid from '../../components/PackagesGrid';
+import Itinerary from '../../components/Itinerary';
 import { MapPin } from 'lucide-react';
+
+const itinerary = [
+  {
+    day: 1,
+    title: "City Tour Histórico",
+    description: "Recepción y traslado al hotel. Visita a la Plaza de Armas, Cuarto de Rescate del Inca Atahualpa, Iglesia de San Francisco y el mirador de Santa Apolonia para una vista panorámica de la ciudad."
+  },
+  {
+    day: 2,
+    title: "Ruta del Valle y Baños del Inca",
+    description: "Visita a las Ventanillas de Otuzco (necrópolis preinca). Por la tarde, relajación en las históricas aguas termales de los Baños del Inca."
+  },
+  {
+    day: 3,
+    title: "Hacienda La Collpa y Despedida",
+    description: "Visita a la famosa hacienda donde 'llaman a las vacas por su nombre', degustación de quesos y manjar blanco. A la hora indicada, traslado al aeropuerto o terrapuerto."
+  }
+];
 ---
 
 <Layout title="Cajamarca: Historia y Tradición | Vibal Tours">
@@ -22,8 +40,8 @@ import { MapPin } from 'lucide-react';
 			<span class="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
 				🌿 Paquetes Exclusivos
 			</span>
-			<h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
-				CAJAMARCA <br/><span class="text-3xl md:text-5xl font-light text-slate-200">HISTORIA Y TRADICIÓN</span>
+			<h1 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
+				CAJAMARCA <br/><span class="text-2xl md:text-4xl font-light text-slate-200">HISTORIA Y TRADICIÓN</span>
 			</h1>
 			<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white font-medium">
 				<div class="flex items-center gap-2">
@@ -35,7 +53,7 @@ import { MapPin } from 'lucide-react';
 	</div>
 
 	<main class="pt-24 pb-12 bg-slate-50">
-		<PackagesGrid lang="es" destination="cajamarca" client:load />
+		<Itinerary days={itinerary} lang="es" client:load />
 	</main>
 	<Footer lang="es" />
 </Layout>

@@ -81,18 +81,18 @@ export default function HeroSlider({ lang }: HeroSliderProps) {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col items-center"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
+            <span className="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-xs font-semibold tracking-wide mb-4">
               🌿 VibalTours
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl font-display font-bold text-white mb-4 leading-tight">
               {lang === 'es' ? slides[current].titleEs : slides[current].titleEn}
             </h1>
-            <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl font-light">
+            <p className="text-base text-slate-200 mb-8 max-w-2xl font-light">
               {lang === 'es' ? slides[current].subtitleEs : slides[current].subtitleEn}
             </p>
             <a 
               href={translatePath('/tours')}
-              className="group/btn relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-brand-600 font-display rounded-xl hover:bg-brand-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-1"
+              className="group/btn relative inline-flex items-center justify-center px-6 py-2.5 font-bold text-white transition-all duration-200 bg-brand-600 font-display rounded-xl hover:bg-brand-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-1"
             >
               {t('hero.cta')}
               <ChevronRight className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover/btn:translate-x-1" />

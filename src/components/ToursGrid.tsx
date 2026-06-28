@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations } from '../i18n/utils';
+import { ChevronRight } from 'lucide-react';
+import { useTranslations, useTranslatedPath } from '../i18n/utils';
 import { ui } from '../i18n/ui';
 
 interface ToursGridProps {
@@ -16,7 +17,8 @@ const tours = [
     descEs: 'Descubre las cataratas, la colonia austro-alemana y la belleza natural.',
     descEn: 'Discover waterfalls, the Austro-German colony and natural beauty.',
     price: 'S/ 150',
-    duration: '2 Días'
+    duration: '2 Días',
+    slug: '/tours/oxapampa'
   },
   {
     id: 2,
@@ -26,7 +28,8 @@ const tours = [
     descEs: 'Conoce el proceso del mejor café del mundo y disfruta de la selva.',
     descEn: 'Learn the process of the best coffee in the world and enjoy the jungle.',
     price: 'S/ 120',
-    duration: '1 Día'
+    duration: 'Fullday',
+    slug: '/tours/chanchamayo'
   },
   {
     id: 3,
@@ -36,12 +39,14 @@ const tours = [
     descEs: 'Un viaje cultural y de naturaleza a la única colonia austro-alemana.',
     descEn: 'A cultural and nature trip to the only Austro-German colony.',
     price: 'S/ 200',
-    duration: '3 Días'
+    duration: '3 Días',
+    slug: '/tours/pozuzo'
   }
 ];
 
 export default function ToursGrid({ lang }: ToursGridProps) {
   const t = useTranslations(lang);
+  const translatePath = useTranslatedPath(lang);
 
   return (
     <section className="py-24 bg-slate-50 overflow-hidden">
@@ -63,13 +68,14 @@ export default function ToursGrid({ lang }: ToursGridProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tours.map((tour, index) => (
-            <motion.div 
+            <motion.a 
+              href={translatePath(tour.slug)}
               key={tour.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full"
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full cursor-pointer block"
             >
               <div className="relative h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-brand-900/20 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
@@ -82,23 +88,23 @@ export default function ToursGrid({ lang }: ToursGridProps) {
                   {tour.duration}
                 </div>
               </div>
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-display font-bold text-slate-900 leading-tight">
+                  <h3 className="text-xl font-display font-bold text-slate-900 leading-tight group-hover:text-brand-600 transition-colors">
                     {lang === 'es' ? tour.titleEs : tour.titleEn}
                   </h3>
                 </div>
-                <p className="text-slate-600 mb-6 line-clamp-2">
+                <p className="text-slate-600 mb-6 flex-grow line-clamp-2">
                   {lang === 'es' ? tour.descEs : tour.descEn}
                 </p>
-                <div className="flex justify-between items-center pt-4 border-t border-slate-100">
-                  <span className="text-2xl font-bold text-brand-600">{tour.price}</span>
-                  <button className="px-5 py-2.5 bg-slate-900 text-white rounded-lg font-medium hover:bg-brand-600 transition-colors shadow-sm hover:shadow-md">
-                    {t('tours.book')}
-                  </button>
+                <div className="mt-auto pt-4 border-t border-slate-100">
+                  <span className="w-full inline-flex items-center justify-center gap-2 bg-brand-50 text-brand-700 font-bold py-3 px-6 rounded-xl transition-all duration-200 group-hover:bg-brand-600 group-hover:text-white">
+                    {lang === 'es' ? 'Ver Detalles' : 'View Details'}
+                    <ChevronRight className="w-4 h-4" />
+                  </span>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

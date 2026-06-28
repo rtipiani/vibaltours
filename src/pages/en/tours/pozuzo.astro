@@ -8,45 +8,45 @@ import { MapPin } from 'lucide-react';
 const itinerary = [
   {
     day: 1,
-    title: "Historical City Tour",
-    description: "Reception and transfer to the hotel. Visit to the Main Square, Atahualpa's Ransom Room, San Francisco Church, and the Santa Apolonia viewpoint for a panoramic view of the city."
+    title: "Arrival in the Central Jungle",
+    description: "Reception and transfer. Start of our adventure touring the landscapes of the central jungle, with stops at natural viewpoints to appreciate the biodiversity."
   },
   {
     day: 2,
-    title: "Valley Route and Inca Baths",
-    description: "Visit to the Ventanillas de Otuzco (pre-Inca necropolis). In the afternoon, relaxation in the historical thermal waters of the Inca Baths."
+    title: "Pozuzo Expedition and Cultural Contact",
+    description: "Trip to the only Austro-German colony in the world. Walk through the Main Square, visit to the San José Church, the Emperor William I suspension bridge, and tasting of its European-Amazonian gastronomy."
   },
   {
     day: 3,
-    title: "La Collpa Hacienda and Farewell",
-    description: "Visit to the famous hacienda where 'cows are called by their names', tasting of cheeses and manjar blanco. At the indicated time, transfer to the airport or bus station."
+    title: "Nature and Farewell",
+    description: "Free morning to explore the surroundings, shop for local crafts, or visit nearby waterfalls. In the afternoon, transfer for the return trip."
   }
 ];
 ---
 
-<Layout title="Cajamarca: History and Tradition | Vibal Tours">
+<Layout title="Pozuzo Expedition | Vibal Tours">
 	<Navbar lang="en" isTransparent={true} client:load />
 	
 	<!-- Hero Section -->
 	<div class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
 		<div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/80 z-10"></div>
 		<img 
-			src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2000&auto=format&fit=crop" 
-			alt="Cajamarca" 
+			src="https://images.unsplash.com/photo-1533088231264-98425ee190a6?auto=format&fit=crop&w=2000&q=80" 
+			alt="Pozuzo" 
 			class="absolute inset-0 w-full h-full object-cover object-center z-0"
 		/>
 		
 		<div class="relative z-20 text-center px-4 max-w-5xl mx-auto pt-20">
 			<span class="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
-				🌿 Exclusive Packages
+				🌿 Cultural and Nature Tour
 			</span>
 			<h1 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
-				CAJAMARCA <br/><span class="text-2xl md:text-4xl font-light text-slate-200">HISTORY AND TRADITION</span>
+				POZUZO <br/><span class="text-2xl md:text-4xl font-light text-slate-200">EXPEDITION</span>
 			</h1>
 			<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white font-medium">
 				<div class="flex items-center gap-2">
 					<MapPin className="w-5 h-5 text-accent-400" />
-					<span>Cajamarca, Peru</span>
+					<span>Pozuzo, Peru</span>
 				</div>
 			</div>
 		</div>

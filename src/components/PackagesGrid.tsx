@@ -21,7 +21,7 @@ const packages = [
     location: 'Tarapoto, Perú',
     descriptionEs: 'Descubre la magia de la selva peruana, cataratas impresionantes y naturaleza exuberante en este paquete completo.',
     descriptionEn: 'Discover the magic of the Peruvian jungle, impressive waterfalls, and lush nature in this complete package.',
-    slug: '/contact'
+    slug: '/packages/tarapoto'
   },
   {
     id: 'cajamarca',
@@ -33,7 +33,7 @@ const packages = [
     location: 'Cajamarca, Perú',
     descriptionEs: 'Explora la riqueza histórica de Cajamarca, sus baños del Inca, ventanillas de Otuzco y su hermosa campiña.',
     descriptionEn: 'Explore the historical richness of Cajamarca, its Inca baths, Otuzco windows, and its beautiful countryside.',
-    slug: '/contact'
+    slug: '/packages/cajamarca'
   },
   {
     id: 'chancay',
@@ -45,7 +45,7 @@ const packages = [
     location: 'Chancay - Pisco - Ica',
     descriptionEs: 'Un increíble recorrido terrestre por la costa peruana descubriendo maravillas desde el norte chico hasta las dunas del sur.',
     descriptionEn: 'An incredible overland tour along the Peruvian coast discovering wonders from the north coast to the southern dunes.',
-    slug: '/contact'
+    slug: '/packages/chancay'
   }
 ];
 
@@ -98,7 +98,7 @@ export default function PackagesGrid({ lang, destination }: PackagesGridProps) {
             <motion.div 
               key={pkg.id} 
               variants={item}
-              className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-brand-500/10 transition-all duration-300 flex flex-col h-full"
+              className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-brand-500/10 transition-all duration-300 flex flex-col h-full cursor-pointer"
             >
               <div className="relative h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors z-10"></div>

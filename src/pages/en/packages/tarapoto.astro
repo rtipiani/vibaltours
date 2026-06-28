@@ -2,10 +2,36 @@
 import Layout from '../../../layouts/Layout.astro';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import FadeIn from '../../../components/FadeIn';
-import PackagesGrid from '../../../components/PackagesGrid';
-import { ui } from '../../../i18n/ui';
+import Itinerary from '../../../components/Itinerary';
 import { Calendar, MapPin, Clock } from 'lucide-react';
+
+const itinerary = [
+  {
+    day: 1,
+    title: "Arrival and Acclimatization",
+    description: "Airport reception and transfer to the hotel. Free afternoon to enjoy the facilities or take a walk through the city of palms."
+  },
+  {
+    day: 2,
+    title: "Blue Lagoon (Sauce)",
+    description: "Full-day excursion crossing the Huallaga river. We will enjoy a relaxing boat ride on the lagoon, time to swim, and a delicious tourist lunch."
+  },
+  {
+    day: 3,
+    title: "Ahuashiyacu Waterfalls",
+    description: "Hike surrounded by tropical flora and fauna until reaching the impressive 40-meter waterfall. You can take a refreshing dip. Afternoon to relax."
+  },
+  {
+    day: 4,
+    title: "City of Lamas",
+    description: "Visit the 'City of the three natural floors', knowing its beautiful main square, the iconic Lamas Castle, and the Wayku native community."
+  },
+  {
+    day: 5,
+    title: "Farewell",
+    description: "Free morning to shop for local crafts and taste delicious local chocolates. At the appropriate time, transfer to the airport."
+  }
+];
 ---
 
 <Layout title="Tarapoto: City of Palms | Vibal Tours">
@@ -24,8 +50,8 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 			<span class="inline-block py-1 px-3 rounded-full bg-accent-500/20 text-accent-300 backdrop-blur-sm border border-accent-500/30 text-sm font-semibold tracking-wide mb-6">
 				🌿 Exclusive Packages
 			</span>
-			<h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
-				TARAPOTO <br/><span class="text-3xl md:text-5xl font-light text-slate-200">CITY OF PALMS</span>
+			<h1 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
+				TARAPOTO <br/><span class="text-2xl md:text-4xl font-light text-slate-200">CITY OF PALMS</span>
 			</h1>
 			<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white font-medium">
 				<div class="flex items-center gap-2">
@@ -37,7 +63,7 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 	</div>
 
 	<main class="pt-24 pb-12 bg-slate-50">
-		<PackagesGrid lang="en" destination="tarapoto" client:load />
+		<Itinerary days={itinerary} lang="en" client:load />
 	</main>
 	<Footer lang="en" />
 </Layout>
